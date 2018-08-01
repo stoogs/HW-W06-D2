@@ -2,14 +2,15 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
-
-/* MVP
-Write a method to count the number of collection in the library.
-Write a method to add a book to the library stock.
-Add a capacity to the library and write a method to check if stock is full before adding a book.*/
+/**
+ * MVP
+ * Write a method to count the number of collection in the library.
+ * Write a method to add a book to the library stock.
+ * Add a capacity to the library and write a method to check if stock is full before adding a book
+ */
 public class LibraryTest {
-    Book book;
-    Library library;
+    Book book;  //String name...
+    Library library; // int age...
 
    @Before
     public void before(){
@@ -46,12 +47,9 @@ public class LibraryTest {
         library.addBook(book);
         library.addBook(book);
         library.addBook(book);
-        if (this.library.bookCount() < 5) {
-            library.addBook(book);
-        } else{
-            System.out.println("No Room");
-        }
-        assertEquals(5, library.bookCount());
+        library.addBook(book);
+        library.addBook(book);
+        assertEquals(4, library.bookCount());
     }
 
 
